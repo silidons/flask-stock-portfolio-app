@@ -120,6 +120,11 @@ def configure_logging(app):
         app.logger.handlers.extend(gunicorn_error_logger.handlers)
         app.logger.setLevel(logging.DEBUG)
     else:
+        # 🔥 Ensure the instance folder exists before logging to it!
+        instance_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'instance')
+        os.makedirs(instance_folder, exist_ok=True)
+
+        log_file = os.path.join(instance_folder, 'flask-stock-portfolio.log')
         file_handler = RotatingFileHandler('instance/flask-stock-portfolio.log',
                                     maxBytes=16384,
                                     backupCount=20)
