@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Flask instance folder (runtime files, local db, secrets)
+instance/
+
+# SQLite database files
+*.sqlite3
+*.db
+
+# Pytest cache
+.pytest_cache/
+
+# Test coverage reports
+.coverage
+htmlcov/
+.tox/
+
+# Migrations (if you want to ignore generated files, optional)
+migrations/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Environment variables
+.env
+*.env
+
+# macOS & Windows system files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (optional)
+.vscode/
